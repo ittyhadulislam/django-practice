@@ -23,8 +23,10 @@
 
   <!-- Card Section -->
   <h2 class="text-4xl font-bold text-center mb-[50px]">Featured Courses</h2>
+  <!-- <pre>{{ courses_details | length }}</pre> -->
   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-[50px]">
     <!-- card 1 -->
+    {% for course_dts in courses_details %}
     <div class="card bg-base-100 w-auto shadow-sm">
       <figure>
         <img
@@ -34,180 +36,18 @@
       </figure>
       <div class="card-body">
         <h2 class="card-title">
-          Card Title
-          <div class="badge badge-secondary">NEW</div>
+          {{course_dts.course_name}}
+          <!-- <div class="badge badge-secondary">NEW</div> -->
         </h2>
-        <p>
-          A card component has a figure, a body part, and inside body there are
-          title and actions parts
-        </p>
-        <div class="card-actions justify-end">
+        <p>{{course_dts.course_description}}</p>
+        <p>{{course_dts.course_duration}} || ${{course_dts.course_price}}</p>
+        <!-- <div class="card-actions justify-end">
           <div class="badge badge-outline">Fashion</div>
           <div class="badge badge-outline">Products</div>
-        </div>
+        </div> -->
       </div>
     </div>
-    <!-- card 2 -->
-    <div class="card bg-base-100 w-auto shadow-sm">
-      <figure>
-        <img
-          src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-          alt="Shoes"
-        />
-      </figure>
-      <div class="card-body">
-        <h2 class="card-title">
-          Card Title
-          <div class="badge badge-secondary">NEW</div>
-        </h2>
-        <p>
-          A card component has a figure, a body part, and inside body there are
-          title and actions parts
-        </p>
-        <div class="card-actions justify-end">
-          <div class="badge badge-outline">Fashion</div>
-          <div class="badge badge-outline">Products</div>
-        </div>
-      </div>
-    </div>
-    <!-- card 3 -->
-    <div class="card bg-base-100 w-auto shadow-sm">
-      <figure>
-        <img
-          src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-          alt="Shoes"
-        />
-      </figure>
-      <div class="card-body">
-        <h2 class="card-title">
-          Card Title
-          <div class="badge badge-secondary">NEW</div>
-        </h2>
-        <p>
-          A card component has a figure, a body part, and inside body there are
-          title and actions parts
-        </p>
-        <div class="card-actions justify-end">
-          <div class="badge badge-outline">Fashion</div>
-          <div class="badge badge-outline">Products</div>
-        </div>
-      </div>
-    </div>
-    <!-- card 4 -->
-    <div class="card bg-base-100 w-auto shadow-sm">
-      <figure>
-        <img
-          src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-          alt="Shoes"
-        />
-      </figure>
-      <div class="card-body">
-        <h2 class="card-title">
-          Card Title
-          <div class="badge badge-secondary">NEW</div>
-        </h2>
-        <p>
-          A card component has a figure, a body part, and inside body there are
-          title and actions parts
-        </p>
-        <div class="card-actions justify-end">
-          <div class="badge badge-outline">Fashion</div>
-          <div class="badge badge-outline">Products</div>
-        </div>
-      </div>
-    </div>
-    <!-- card 5 -->
-    <div class="card bg-base-100 w-auto shadow-sm">
-      <figure>
-        <img
-          src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-          alt="Shoes"
-        />
-      </figure>
-      <div class="card-body">
-        <h2 class="card-title">
-          Card Title
-          <div class="badge badge-secondary">NEW</div>
-        </h2>
-        <p>
-          A card component has a figure, a body part, and inside body there are
-          title and actions parts
-        </p>
-        <div class="card-actions justify-end">
-          <div class="badge badge-outline">Fashion</div>
-          <div class="badge badge-outline">Products</div>
-        </div>
-      </div>
-    </div>
-    <!-- card 6 -->
-    <div class="card bg-base-100 w-auto shadow-sm">
-      <figure>
-        <img
-          src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-          alt="Shoes"
-        />
-      </figure>
-      <div class="card-body">
-        <h2 class="card-title">
-          Card Title
-          <div class="badge badge-secondary">NEW</div>
-        </h2>
-        <p>
-          A card component has a figure, a body part, and inside body there are
-          title and actions parts
-        </p>
-        <div class="card-actions justify-end">
-          <div class="badge badge-outline">Fashion</div>
-          <div class="badge badge-outline">Products</div>
-        </div>
-      </div>
-    </div>
-    <!-- card 7 -->
-    <div class="card bg-base-100 w-auto shadow-sm">
-      <figure>
-        <img
-          src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-          alt="Shoes"
-        />
-      </figure>
-      <div class="card-body">
-        <h2 class="card-title">
-          Card Title
-          <div class="badge badge-secondary">NEW</div>
-        </h2>
-        <p>
-          A card component has a figure, a body part, and inside body there are
-          title and actions parts
-        </p>
-        <div class="card-actions justify-end">
-          <div class="badge badge-outline">Fashion</div>
-          <div class="badge badge-outline">Products</div>
-        </div>
-      </div>
-    </div>
-    <!-- card 8 -->
-    <div class="card bg-base-100 w-auto shadow-sm">
-      <figure>
-        <img
-          src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-          alt="Shoes"
-        />
-      </figure>
-      <div class="card-body">
-        <h2 class="card-title">
-          Card Title
-          <div class="badge badge-secondary">NEW</div>
-        </h2>
-        <p>
-          A card component has a figure, a body part, and inside body there are
-          title and actions parts
-        </p>
-        <div class="card-actions justify-end">
-          <div class="badge badge-outline">Fashion</div>
-          <div class="badge badge-outline">Products</div>
-        </div>
-      </div>
-    </div>
+    {% endfor %}
   </div>
 
   <!-- Testimonial -->
@@ -338,5 +178,4 @@
     <div class="swiper-pagination mt-6"></div>
   </div>
 </div>
-  {% endblock content %}
-
+{% endblock content %}
