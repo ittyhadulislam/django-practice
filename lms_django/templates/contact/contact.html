@@ -1,8 +1,16 @@
-{% extends "common_code/base.html" %}
-{% block title %} Contact {% endblock title %}
+{% extends "common_code/base.html" %} 
+
+{% block title %} Contact {% endblock title %} 
+
 {% block content %}
-<form>
-    {{form}}
+<form method="POST">
+  <!-- {{form}} -->
+   {% csrf_token %}
+  <div class="container mx-auto p-4">
+    {% for formElements in form %}
+    <div class="mb-4 h-fit">{{formElements}}</div>
+    {% endfor %}
     <input type="submit" class="btn" value="Submit" />
+  </div>
 </form>
 {% endblock content %}
