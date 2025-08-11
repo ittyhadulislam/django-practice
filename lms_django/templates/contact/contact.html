@@ -8,7 +8,11 @@
    {% csrf_token %}
   <div class="container mx-auto p-4">
     {% for formElements in form %}
-    <div class="mb-4 h-fit">{{formElements}}</div>
+      {% if formElements.name == "django" %}
+        <div class="mb-4 h-fit">{{formElements}} Do you know Django</div>
+      {% else %}
+        <div class="mb-4 h-fit">{{formElements}}</div>
+      {% endif %}
     {% endfor %}
     <input type="submit" class="btn" value="Submit" />
   </div>
