@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Authentication</title>
+  <style>
+    form {
+      max-width: 600px;
+    }
+    .form-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .form-row label {
+      display: inline-block;
+      width: 200px;
+      text-align: left;
+      margin-right: 1px;
+    }
+    .form-row input,
+    .form-row textarea,
+    .form-row select {
+      flex: 1;
+    }
+  </style>
+</head>
+<body>
+  <h1>This is registration form</h1>
+  <form action="" method="POST">
+    {% csrf_token %}
+    {% for regF in regForm %}
+      <div class="form-row">
+        {{ regF.label_tag }}{{ regF }}
+        <div>
+            {{regF.errors|striptags }}
+        </div>
+      </div>
+    {% endfor %}
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>
